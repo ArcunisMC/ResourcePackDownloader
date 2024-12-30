@@ -46,7 +46,7 @@ public final class Main extends JavaPlugin implements Listener {
 
         if (resourcePackHash != null) {
             // Send the resource pack to the player
-            player.setResourcePack(RESOURCE_PACK_URL, resourcePackHash);
+            player.setResourcePack(RESOURCE_PACK_URL, resourcePackHash, getConfig().getBoolean("required", false));
         } else {
             player.sendMessage("Resource pack is unavailable at the moment. Please contact the server administrator.");
         }
