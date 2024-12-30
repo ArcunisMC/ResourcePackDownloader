@@ -15,11 +15,19 @@ import java.security.MessageDigest;
 
 public final class Main extends JavaPlugin implements Listener {
 
-    private static final String RESOURCE_PACK_URL = "https://github.com/ArcunisMC/Pack/releases/latest/download/pack.zip";
+    private static String RESOURCE_PACK_URL = null;
     private String resourcePackHash = null;
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+        RESOURCE_PACK_URL = "https://github.com/"
+                + getConfig().getString("author")
+                + "/"
+                + getConfig().getString("repo")
+                + "/releases/latest/download/"
+                + getConfig().getString("file");
+
         // Register the event listener
         getServer().getPluginManager().registerEvents(this, this);
 
