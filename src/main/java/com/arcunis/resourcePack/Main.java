@@ -1,4 +1,4 @@
-package com.arcunis.resourcepack;
+package com.arcunis.resourcePack;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
