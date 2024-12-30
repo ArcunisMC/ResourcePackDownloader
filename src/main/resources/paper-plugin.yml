@@ -1,0 +1,6 @@
+name: ResourcePack
+version: '${version}'
+main: com.com.arcunis.resourcepack.Main
+api-version: '1.21'
+prefix: ResourcePack
+load: STARTUP
